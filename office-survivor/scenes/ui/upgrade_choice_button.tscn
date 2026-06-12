@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://upgbtn001"]
+
+[ext_resource type="Script" path="res://scripts/ui/upgrade_choice_button.gd" id="1"]
+
+[node name="UpgradeChoiceButton" type="Button"]
+custom_minimum_size = Vector2(520, 88)
+theme_override_font_sizes/font_size = 14
+text = ""
+script = ExtResource("1")
+
+[node name="Content" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="HBox" type="HBoxContainer" parent="Content"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="IconRect" type="TextureRect" parent="Content/HBox"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_vertical = 4
+texture_filter = 0
+stretch_mode = 5
+expand_mode = 1
+
+[node name="VBox" type="VBoxContainer" parent="Content/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="TitleLabel" type="Label" parent="Content/HBox/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Upgrade Title"
+
+[node name="DescLabel" type="Label" parent="Content/HBox/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.78, 0.82, 1)
+theme_override_font_sizes/font_size = 12
+text = "Description"
+autowrap_mode = 3
